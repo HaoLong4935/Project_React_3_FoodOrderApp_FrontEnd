@@ -1,5 +1,4 @@
 import { Auth0Provider } from "@auth0/auth0-react"
-import { User } from "@auth0/auth0-spa-js"
 import { useNavigate } from "react-router-dom"
 
 type Props = {

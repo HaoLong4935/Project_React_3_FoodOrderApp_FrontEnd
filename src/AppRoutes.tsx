@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom"
 import ProtectedRoute from "./auth/ProtectedRoute"
-import Header from "./components/Header"
 import Layout from "./layouts/layout"
 import AuthCallBackPage from "./pages/AuthCallBackPage"
 import HomePage from "./pages/HomePage"
