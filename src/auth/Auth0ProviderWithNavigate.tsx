@@ -1,4 +1,4 @@
-import { Auth0Provider } from "@auth0/auth0-react"
+import { AppState, Auth0Provider } from "@auth0/auth0-react"
 import { useNavigate } from "react-router-dom"
 
 type Props = {
@@ -17,8 +17,11 @@ const Auth0ProviderWithNavigate = ({ children }: Props) => {
         throw new Error("Unable to initialise auth")
     }
 
-    const onRedirectCallback = () => {
-        navigate("/auth-callback")
+    const onRedirectCallback = (appState?: AppState) => {
+        navigate(appState?.returnTo || "/auth-callback")
+        //Vi du user khi muon check out nhung truoc do chua login 
+        //Thi khi navigate se kiem tra appState co gia tri returnTo la duong dan truoc do nguoi dung dang o
+        //Neu co thi quay lai trang checkout 
     }
 
     return (
@@ -29,7 +32,8 @@ const Auth0ProviderWithNavigate = ({ children }: Props) => {
                 redirect_uri: redirectUri,
                 audience,
             }}
-            onRedirectCallback={onRedirectCallback}>
+            onRedirectCallback={onRedirectCallback}
+        >
             {children}
         </Auth0Provider>
     )
