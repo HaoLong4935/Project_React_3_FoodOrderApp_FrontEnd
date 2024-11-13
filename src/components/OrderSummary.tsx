@@ -1,8 +1,6 @@
 import { CartItem } from "@/pages/DetailPage";
 import { Restaurant } from "@/types";
-import { convertRoutesToDataRoutes } from "@remix-run/router/dist/utils";
-import { Delete, DeleteIcon, Trash2 } from "lucide-react";
-import RestaurantInfo from "./RestaurantInfo";
+import { Trash2 } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Separator } from "./ui/separator";
