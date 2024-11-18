@@ -18,6 +18,7 @@ const UserProfilePage = () => {
             currentUser={currentUser}
             onSave={updateUser}
             isLoading={isUpdateLoading} />
+
     )
 }
 
